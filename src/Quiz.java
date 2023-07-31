@@ -47,7 +47,7 @@ public class Quiz {
 				Question quiz = quizList.get(i - 1);
 				System.out.printf("[第%d問]\n%s\n", i, quiz.question);
 				System.out.printf("① %s  ② %s  ③ %s", quiz.select1, quiz.select2, quiz.select3);
-				System.out.print("\n\n正解を入力 >");
+				System.out.print("\n\n正解番号を入力 >");
 
 				int d = sc.nextInt();
 
@@ -57,11 +57,11 @@ public class Quiz {
 				}
 
 				if (d == quiz.ans) {
-					System.out.println("\n正解！！！\n");
+					System.out.println("\n正解！！！！！\n");
 					break;
 
 				} else {
-					System.out.println("\n不正解！\n");
+					System.out.println("\n残念！不正解！\n正解するまで回答できます。\n");
 					incorrectAns++;
 
 				}
@@ -72,12 +72,12 @@ public class Quiz {
 		//10問以上不正解
 		if (incorrectAns >= 10) {
 			System.out.println("不正解数は" + incorrectAns + "問でした。");
-			System.out.println("名探偵コナン見たことある・・・(;_;)？");
+			System.out.println("名探偵コナン見たことありますか・・・(;_;)？");
 
 		//7-9問 不正解
 		} else if (incorrectAns >= 7) {
 			System.out.println("不正解数は" + incorrectAns + "問でした。");
-			System.out.println("面白いので、もっとアニメ・漫画見てみてね！");
+			System.out.println("面白いので、もっともっとアニメ・漫画見てみてね！");
 
 		//4-6問 不正解
 		} else if (incorrectAns >= 4) {
@@ -87,12 +87,12 @@ public class Quiz {
 		//1-3問 不正解
 		} else if (incorrectAns >= 1) {
 			System.out.println("不正解数は" + incorrectAns + "問でした。");
-			System.out.println("コナン博士まであともう少し・・！！");
+			System.out.println("コナン博士まであともう少し・・！");
 		
 		//全問正解
 		} else {
 			System.out.println("不正解数は" + incorrectAns + "問でした。");
-			System.out.println("全問正解！！キミは名探偵コナン博士だ！");
+			System.out.println("全問正解！！キミは名探偵コナン博士だ！おめでとう！");
 
 		}
 
